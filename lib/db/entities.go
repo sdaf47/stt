@@ -9,13 +9,11 @@ type Entity interface {
 }
 
 type Step struct {
-	Id     int `redis:"id"`
 	Action string `redis:"action"`
 	Result string `redis:"result"`
 }
 
 type Case struct {
-	Id     int `redis:"id"`
 	Name   string `redis:"name"`
 	Desc   string `redis:"desc"`
 	Status bool `redis:"status"`
@@ -23,7 +21,6 @@ type Case struct {
 }
 
 type Release struct {
-	Id    int `redis:"id"`
 	Name  string `redis:"name"`
 	Desc  string `redis:"desc"`
 	Date  time.Duration `redis:"date"`

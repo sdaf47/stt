@@ -32,15 +32,18 @@ func (s *Server) AddEntity(e Entity) (int) {
 	fmt.Println("id", id)
 
 	for i := 0; i < val.NumField(); i++ {
-		valueField := val.Field(i).String()
+		valueField := val.Field(i)
 		typeField := val.Type().Field(i)
 		tag := typeField.Tag
 
 		key := fmt.Sprintf("%s:%d:%s", nameEntity, id, tag.Get("redis"))
 
-		fmt.Println(key, valueField)
-
-		s.Set(key, valueField, 0)
+		switch typeField.Type.String() {
+		case "string":
+			s.Set(key, valueField.String(), 0)
+		case "int":
+			s.Set(key, valueField.Int(), 0)
+		}
 	}
 
 	s.RPush(nameIterator, id)
@@ -78,3 +81,4 @@ func (s *Server) GetEntity(m Entity, id int) (interface{}) {
 	reflect.Indirect(rv)
 	return rv.Interface()
 }
+
