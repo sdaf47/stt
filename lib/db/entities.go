@@ -1,29 +1,31 @@
 package db
 
-import "time"
+import (
+	"time"
+)
 
 type Entity interface {
 
 }
 
 type Step struct {
-	Id int `json:"id"`
-	Action string `json:"action"`
-	Result string `json:"result"`
+	Id     int `redis:"id"`
+	Action string `redis:"action"`
+	Result string `redis:"result"`
 }
 
 type Case struct {
-	Id int `json:"id"`
-	Name string `json:"name"`
-	Desc string `json:"desc"`
-	Status string `json:"status"`
-	Steps []Step `json:"steps"`
+	Id     int `redis:"id"`
+	Name   string `redis:"name"`
+	Desc   string `redis:"desc"`
+	Status bool `redis:"status"`
+	Steps  []int `redis:"steps"`
 }
 
 type Release struct {
-	Id int `json:"id"`
-	Name string `json:"name"`
-	Desc string `json:"desc"`
-	Date time.Duration `json:"date"`
-	Cases []Case `json:"cases"`
+	Id    int `redis:"id"`
+	Name  string `redis:"name"`
+	Desc  string `redis:"desc"`
+	Date  time.Duration `redis:"date"`
+	Cases []int `redis:"cases"`
 }
