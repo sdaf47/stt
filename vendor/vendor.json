@@ -1,6 +1,55 @@
 {
 	"comment": "",
 	"ignore": "test",
-	"package": [],
+	"package": [
+		{
+			"checksumSHA1": "Pc2ORQp+VY3Un/dkh4QwLC7R6lE=",
+			"path": "github.com/BurntSushi/toml",
+			"revision": "a368813c5e648fee92e5f6c30e3944ff9d5e8895",
+			"revisionTime": "2017-06-26T11:06:00Z"
+		},
+		{
+			"checksumSHA1": "TpUKtlcH90WDMvWfKX0j/bDUXxE=",
+			"path": "github.com/jinzhu/configor",
+			"revision": "6c409036e1aea1420f2e1a196f95c0e3c4aef091",
+			"revisionTime": "2017-08-25T12:47:32Z"
+		},
+		{
+			"checksumSHA1": "LH4+RHhgA8I5rQdoPGoPpn0rWok=",
+			"path": "gopkg.in/mgo.v2-unstable",
+			"revision": "ac340de385459c6fec994606fb457b6ffe69d55f",
+			"revisionTime": "2017-08-07T12:35:18Z"
+		},
+		{
+			"checksumSHA1": "277bXozBojNqxn53BQWuccV48GU=",
+			"path": "gopkg.in/mgo.v2-unstable/bson",
+			"revision": "ac340de385459c6fec994606fb457b6ffe69d55f",
+			"revisionTime": "2017-08-07T12:35:18Z"
+		},
+		{
+			"checksumSHA1": "LRrDb5QiVI8BBHLipwclwkFFAJk=",
+			"path": "gopkg.in/mgo.v2-unstable/internal/json",
+			"revision": "ac340de385459c6fec994606fb457b6ffe69d55f",
+			"revisionTime": "2017-08-07T12:35:18Z"
+		},
+		{
+			"checksumSHA1": "A6kKIc9iWy3lyZGbb62EJYnA8YU=",
+			"path": "gopkg.in/mgo.v2-unstable/internal/sasl",
+			"revision": "ac340de385459c6fec994606fb457b6ffe69d55f",
+			"revisionTime": "2017-08-07T12:35:18Z"
+		},
+		{
+			"checksumSHA1": "p682APODuwoRwS9nj+NVu7wRxjo=",
+			"path": "gopkg.in/mgo.v2-unstable/internal/scram",
+			"revision": "ac340de385459c6fec994606fb457b6ffe69d55f",
+			"revisionTime": "2017-08-07T12:35:18Z"
+		},
+		{
+			"checksumSHA1": "12GqsW8PiRPnezDDy0v4brZrndM=",
+			"path": "gopkg.in/yaml.v2",
+			"revision": "a5b47d31c556af34a302ce5d659e6fea44d90de0",
+			"revisionTime": "2016-09-28T15:37:09Z"
+		}
+	],
 	"rootPath": "github.com/sdaf47/stt"
 }
