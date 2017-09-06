@@ -7,7 +7,9 @@ import (
 const ConfigPath = "config.yml"
 
 type Config struct {
-	APPName string `default:"gid"`
+	Mongo struct{
+		HostPort string
+	}
 }
 
 func (app *Config) Load() (err error) {
